@@ -1,0 +1,31 @@
+<html ng-app="APP">
+<head>
+  <title>Pause Analyzer</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.min.js"></script>
+  <script src="./js/app.js"></script>
+  <!-- http://regexr.com -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/main-style.css">
+
+</head>
+<body>
+
+  <h1 class='title'>Pause Analizer</h1>
+
+  <div ng-controller="addSlashCtrl">
+    <h2>Plain Text</h2>
+    <textarea ng-model="plainText" placeholder="Input your text"></textarea><br>
+    <h2>[Analized] Text added slashs</h2>
+    <p ng-bind-html="analizedText()" class="analized_area"></p>
+  </div>
+
+  <h2> Rules</h2>
+  <ul>
+    <li>Triple slashs: ".", "!", "?"</li>
+    <li>Duble slashs: ",", ":", ";"</li>
+    <li>Single slashs: Conjunctions</li>
+  </ul>
+
+</body>
+</html>
