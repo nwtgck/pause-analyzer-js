@@ -13,12 +13,12 @@ angular.module('APP', ['ngSanitize'])
       var text = $scope.plainText + "\n";
 
       // Add triple slashs text
-      text = text.replace(/([a-zA-Z()]+[\.\!?])([ \n])/g, function(n0, n1, n2){
+      text = text.replace(/([a-zA-Z()]+[\.\!?]+)("?)([ \n])/g, function(n0, n1, n2, n3){
         // If n1 is in exception cases (such as 'Mr.' or 'Ms.')
         if(exceptCases.includes(n1)){
-          return n1 + n2 + " ";
+          return n1 + n2 + n3 + " " ;
         } else {
-          return n1 + "<span class='slash3'>///</span> " + n2;
+          return n1 + n2 + "<span class='slash3'>///</span> " + n3;
         }
       });
 
