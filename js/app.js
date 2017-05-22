@@ -4,15 +4,22 @@ angular.module('APP', ['ngSanitize'])
 
     // Example settings
     $scope.sample_sentences = [
-      {name: "Empty sentence",           entity: ""},
-      {name: "Power(a^n)",               entity: "load_pow_setting"},
-      {name: "Factorial(n!) - for-like", entity: "load_fact_for_like_setting"},
-      {name: "Factorial(n!) - simple",   entity: "load_fact_simple_setting"},
-      {name: "Fibonacci",                entity: "load_fib_setting"},
-      {name: 'map ver1',                 entity: "load_map1_setting"},
-      {name: 'map ver2',                 entity: "load_map2_setting"},
-      {name: 'foldLeft',                 entity: "load_foldl_setting"},
-      {name: 'foldRight',                entity: "load_foldr_setting"}
+      {name: "empty sentence",           entity: ""},
+      {name: "hello, world",             entity: "hello, world."},
+      {name: "!",                        entity: "Start recruting multilingual candidates now!"},
+      {name: "?",                        entity: "What is in his closet?"},
+      {name: "Mr. Bean",                 entity: "Mr. Bean is a 2002 animated television series."},
+      {name: "Mt. Fuji",                 entity: "Viewing Mt. Fuji from a far distances is very wonderful."},
+      {name: "conjunctions - when",      entity: "To prepare for manual scripting when an unanticipated get call is received."},
+      {name: "conjunctions - while",     entity: "Firmly grasp and hold the monitor by the bottom while grabbing the handle."},
+      {name: 'transitive - accordingly', entity: "Accordingly we believe that the proposed Provision, which may prevent flexible design of the system in the future, should [...] not be added to the Articles of Incorporation."},
+      {name: 'transitive - otherwise',   entity: "Otherwise you will create multiple members with names."},
+      {name: "Today ...",                entity: "Today we want all of our employees to feel empowered."},
+      {name: "Today is ...",             entity: "Today is an auspicious moment. "},
+      {name: "\"....\"",                 entity: "\"And what an ignorant little girl she'll think me for asking! No, it'll never do to ask: perhaps I shall see it written up somewhere.\""},
+      {name: "\"...!\"",                 entity: "The Rabbit say to itself \"I shall be too late!\""},
+      {name: "long sentence - banana",   entity: "Banana is one of Rwanda's staple foods, and it has very high productivity; thus it is the foundation supporting the densely populated country. However, if you have low blood sugar, you can eat a banana or drink a fruit juice up to thirty minutes before class."},
+      {name: 'long sentence - Alice',    entity: "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, \"and what is the use of a book,\" thought Alice, \"without pictures or conversations?\""}
     ];
 
     // Default example sentences
