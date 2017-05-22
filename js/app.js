@@ -1,6 +1,23 @@
 angular.module('APP', ['ngSanitize'])
   // Controller for adding slashs
   .controller('addSlashCtrl', ['$scope', function($scope){
+
+    // Example settings
+    $scope.sample_sentences = [
+      {name: "Empty sentence",           entity: ""},
+      {name: "Power(a^n)",               entity: "load_pow_setting"},
+      {name: "Factorial(n!) - for-like", entity: "load_fact_for_like_setting"},
+      {name: "Factorial(n!) - simple",   entity: "load_fact_simple_setting"},
+      {name: "Fibonacci",                entity: "load_fib_setting"},
+      {name: 'map ver1',                 entity: "load_map1_setting"},
+      {name: 'map ver2',                 entity: "load_map2_setting"},
+      {name: 'foldLeft',                 entity: "load_foldl_setting"},
+      {name: 'foldRight',                entity: "load_foldr_setting"}
+    ];
+
+    // Default example sentences
+    $scope.current_sample_sentence = $scope.sample_sentences[0];
+
     // List of exception cases
     var exceptCases = ["Mr.", "Ms.", "Mrs.", "Miss.", "Mt.", "N.Y.", "Prof."];
     // Plain text
@@ -43,5 +60,9 @@ angular.module('APP', ['ngSanitize'])
       // Newline to <br>
       text = text.replace(/\n/g, "<br>");
       return text;
-    }
+    };
+
+    $scope.reflectSampleSentence = function(){
+      $scope.plainText = $scope.current_sample_sentence.entity;
+    };
   }]);

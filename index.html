@@ -3,35 +3,53 @@
   <title>Pause Analyzer</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.min.js"></script>
-  <script src="./js/app.js"></script>
   <!-- http://regexr.com -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="./css/main-style.css">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="./css/main-style.css">
+  <script src="./js/app.js"></script>
 </head>
 <body>
 
   <h1 class='title'>Pause Analizer</h1>
 
-  <div ng-controller="addSlashCtrl">
-    <h2>Plain Text</h2>
-    <textarea ng-model="plainText" placeholder="Input your text"></textarea><br>
-    <h2>[Analized] Text added slashs</h2>
-    <p ng-bind-html="analizedText()" class="analized_area"></p>
-  </div>
+  <div class="content">
 
-  <h2> Rules</h2>
-  <table border="1">
-    <tr>
-      <td>three slashs</td><td>".", "!", "?"</td>
-    </tr>
-    <tr>
-      <td>two slashs</td><td>",", ":", ";"</td>
-    </tr>
-    <tr>
-      <td>one slash</td><td>conjunctions, transitions</td>
-    </tr>
-  </table>
+    <div ng-controller="addSlashCtrl">
+      <div class="form-group form-inline-group">
+        <label for="sampleSentences" class="control-label">Sample sentences</label>
+          <select ng-model='current_sample_sentence' ng-options="sentence.name for sentence in sample_sentences" ng-change="reflectSampleSentence()" class="form-control" id="sampleSentences">
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label for="plainTex">Plain Text</label>
+        <textarea ng-model="plainText" placeholder="Input your text" id="plainText" class="form-control" rows="10"></textarea>
+      </div>
+
+      <label for="analyzedText">Text with slashs</label>
+      <p ng-bind-html="analizedText()" class="analized_area" id="analyzedText"></p>
+    </div>
+
+
+    <label for="rulesTable">Rules</label>
+    <table class="table" id="rulesTable">
+      <tr>
+        <td>Three slashs</td><td><code>.</code>, <code>!</code>, <code>?</code></td>
+      </tr>
+      <tr>
+        <td>Two slashs</td><td><code>,</code>, <code>:</code>, <code>;</code></td>
+      </tr>
+      <tr>
+        <td>One slash</td><td>conjunctions, transitions</td>
+      </tr>
+    </table>
+  </div>
 
 </body>
 </html>
