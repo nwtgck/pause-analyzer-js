@@ -28,6 +28,12 @@ angular.module('APP', ['ngSanitize'])
       // Add single slashs to text
       text = text.replace(/(after|although|because|before|but|considering|directorly|however|though|when|whenever|whether|while)([ \n])/g, "<span class='slash1'>/</span>$1 $2");
 
+      // Add single slashs to text
+      text = text.replace(/(Today)([ \n])/g, "$1<span class='slash1'>/</span> $2");
+
+      // Add single slashs to text
+      text = text.replace(/(Accordingly|Also|Besides|Consequently|Conversely|Finally|Furthermore|Hence|However|Indeed|Instead|Likewise|Meanwhile|Moreover|Nevertheless|Next|Nonetheless|Otherwise|Similarly|Still|Subsequently|Then|Therefore|Thus)([ \n])/g, "$1<span class='slash1'>/</span> $2");
+
       // Newline to <br>
       text = text.replace(/\n/g, "<br>");
       return text;
