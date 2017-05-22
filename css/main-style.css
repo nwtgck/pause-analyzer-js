@@ -21,6 +21,11 @@ label{
   font-weight: lighter;
 }
 
+p{
+  font-size: 1.5em;
+  color: #424242;
+}
+
 .title{
   color: white;
   font-weight: lighter;
@@ -50,7 +55,14 @@ label{
   font-weight: bold;
 }
 
+.plain_text{
+  background-color: #F8F2E1;
+}
+
 .analized_area{
-  background-color: #F5F6CE;
   padding: 1em;
+}
+
+.rules_table{
+  background-color: #ECF2FA;
 }

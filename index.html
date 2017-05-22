@@ -29,16 +29,16 @@
 
       <div class="form-group">
         <label for="plainTex">Plain Text</label>
-        <textarea ng-model="plainText" placeholder="Input your text" id="plainText" class="form-control" rows="10"></textarea>
+        <textarea ng-model="plainText" placeholder="Input your text" id="plainText" class="form-control plain_text" rows="10"></textarea>
       </div>
 
       <label for="analyzedText">Text with slashs</label>
-      <p ng-bind-html="analizedText()" class="analized_area" id="analyzedText"></p>
+      <p ng-bind-html="analizedText()" class="analized_area panel panel-default" id="analyzedText"></p>
     </div>
 
 
     <label for="rulesTable">Rules</label>
-    <table class="table" id="rulesTable">
+    <table class="table rules_table" id="rulesTable">
       <tr>
         <td>Three slashs</td><td><code>.</code>, <code>!</code>, <code>?</code></td>
       </tr>
