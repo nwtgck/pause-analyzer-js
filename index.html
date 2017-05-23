@@ -16,7 +16,14 @@
 </head>
 <body ng-controller="addSlashCtrl">
 
-  <h1 class='title'>{{current_sample_sentence == ppap_sentence ? "PPAP" : "Pause"}} Analizer</h1>
+  <h1 class='title'>
+    <span ng-show="isInPPAPMode()">
+      PPAP <i class="glyphicon glyphicon-apple"></i> <i class="glyphicon glyphicon-pencil"></i> Analizer
+    </span>
+    <span ng-show="!isInPPAPMode()">
+      Pause Analizer
+    </span>
+  </h1>
 
   <div class="content">
 
@@ -32,7 +39,7 @@
         <textarea ng-model="plainText" placeholder="Input your text" id="plainText" class="form-control plain_text" rows="10"></textarea>
       </div>
 
-      <div class="text-center" ng-if="current_sample_sentence == ppap_sentence">
+      <div class="text-center" ng-if="isInPPAPMode()">
         <!-- PPAP -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0E00Zuayv9Q?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
       </div>

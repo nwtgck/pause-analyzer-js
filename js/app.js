@@ -24,8 +24,14 @@ angular.module('APP', ['ngSanitize'])
       $scope.ppap_sentence
     ];
 
+
     // Default example sentences
     $scope.current_sample_sentence = $scope.sample_sentences[0];
+
+
+    $scope.isInPPAPMode = function(){
+      return $scope.current_sample_sentence == $scope.ppap_sentence;
+    };
 
     // List of exception cases
     var exceptCases = ["Mr.", "Ms.", "Mrs.", "Miss.", "Mt.", "N.Y.", "Prof."];
