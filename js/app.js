@@ -12,7 +12,7 @@ angular.module('APP', ['ngSanitize'])
       {name: "Mt. Fuji",                 entity: "Viewing Mt. Fuji from a far distances is very wonderful."},
       {name: "conjunctions - when",      entity: "To prepare for manual scripting when an unanticipated get call is received."},
       {name: "conjunctions - while",     entity: "Firmly grasp and hold the monitor by the bottom while grabbing the handle."},
-      {name: 'transitive - accordingly', entity: "Accordingly we believe that the proposed Provision, which may prevent flexible design of the system in the future, should [...] not be added to the Articles of Incorporation."},
+      {name: 'transitive - accordingly', entity: "Accordingly we believe that the proposed Provision, which may prevent flexible design of the system in the future, should not be added to the Articles of Incorporation."},
       {name: 'transitive - otherwise',   entity: "Otherwise you will create multiple members with names."},
       {name: "Today ...",                entity: "Today we want all of our employees to feel empowered."},
       {name: "Today is ...",             entity: "Today is an auspicious moment. "},
