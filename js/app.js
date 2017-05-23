@@ -2,6 +2,7 @@ angular.module('APP', ['ngSanitize'])
   // Controller for adding slashs
   .controller('addSlashCtrl', ['$scope', function($scope){
 
+    $scope.ppap_sentence = {name: 'long sentence - PPAP',    entity: "P-P-A-P\n\nI have a pen, I have a apple\nUh! Apple-Pen!\n\nI have a pen, I have pineapple\nUh! Pineapple-Pen!\n\nApple-Pen, Pineapple-Pen\nUh! Pen-Pineapple-Apple-Pen\nPen-Pineapple-Apple-Pen"}
     // Example settings
     $scope.sample_sentences = [
       {name: "empty sentence",           entity: ""},
@@ -19,7 +20,8 @@ angular.module('APP', ['ngSanitize'])
       {name: "\"....\"",                 entity: "\"And what an ignorant little girl she'll think me for asking! No, it'll never do to ask: perhaps I shall see it written up somewhere.\""},
       {name: "\"...!\"",                 entity: "The Rabbit say to itself \"I shall be too late!\""},
       {name: "long sentence - banana",   entity: "Banana is one of Rwanda's staple foods, and it has very high productivity; thus it is the foundation supporting the densely populated country. However, if you have low blood sugar, you can eat a banana or drink a fruit juice up to thirty minutes before class."},
-      {name: 'long sentence - Alice',    entity: "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, \"and what is the use of a book,\" thought Alice, \"without pictures or conversations?\""}
+      {name: 'long sentence - Alice',    entity: "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, \"and what is the use of a book,\" thought Alice, \"without pictures or conversations?\""},
+      $scope.ppap_sentence
     ];
 
     // Default example sentences

@@ -14,13 +14,13 @@
   <link rel="stylesheet" href="./css/main-style.css">
   <script src="./js/app.js"></script>
 </head>
-<body>
+<body ng-controller="addSlashCtrl">
 
-  <h1 class='title'>Pause Analizer</h1>
+  <h1 class='title'>{{current_sample_sentence == ppap_sentence ? "PPAP" : "Pause"}} Analizer</h1>
 
   <div class="content">
 
-    <div ng-controller="addSlashCtrl">
+    <div>
       <div class="form-group form-inline-group">
         <label for="sampleSentences" class="control-label">Sample sentences</label>
           <select ng-model='current_sample_sentence' ng-options="sentence.name for sentence in sample_sentences" ng-change="reflectSampleSentence()" class="form-control" id="sampleSentences">
@@ -32,8 +32,14 @@
         <textarea ng-model="plainText" placeholder="Input your text" id="plainText" class="form-control plain_text" rows="10"></textarea>
       </div>
 
+      <div class="text-center" ng-if="current_sample_sentence == ppap_sentence">
+        <!-- PPAP -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0E00Zuayv9Q?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+
       <label for="analyzedText">Text with slashs</label>
       <p ng-bind-html="analizedText()" class="analized_area panel panel-default" id="analyzedText"></p>
+
     </div>
 
 
