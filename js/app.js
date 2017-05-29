@@ -55,7 +55,7 @@ angular.module('APP', ['ngSanitize'])
       });
 
       // Add double slashs to text
-      text = text.replace(/([a-zA-Z]+[\,\:\;])([ \n])/g, "$1<span class='slash2'>//</span> $2");
+      text = text.replace(/([\,\:\;])([ \n])/g, "$1<span class='slash2'>//</span> ");
 
       // Add single slashs to text
       text = text.replace(/(after|although|because|before|but|considering|directorly|however|though|when|whenever|whether|while)([ \n])/g, "<span class='slash1'>/</span>$1 $2");
