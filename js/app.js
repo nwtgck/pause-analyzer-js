@@ -58,7 +58,7 @@ angular.module('APP', ['ngSanitize'])
       text = text.replace(/([\,\:\;])([ \n])/g, "$1<span class='slash2'>//</span> ");
 
       // Add single slashs to text
-      text = text.replace(/(after|although|because|before|but|considering|directorly|however|though|when|whenever|whether|while)([ \n])/g, "<span class='slash1'>/</span>$1 $2");
+      text = text.replace(/(\w+)\s+(after|although|because|before|but|considering|directorly|however|though|when|whenever|whether|while)([ \n])/g, "$1<span class='slash1'>/</span> $2 $3 ");
 
       // Add single slashs to text
       text = text.replace(/(Today)([ \n])([\w\']+)/g, function(n0, n1, n2, n3){
